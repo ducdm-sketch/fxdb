@@ -1,0 +1,141 @@
+/* ============================================================
+   CHARTS.CSS — Chart container sizing and labels
+   ============================================================ */
+
+.chart-container {
+  position: relative;
+  width: 100%;
+}
+
+.chart-container canvas {
+  display: block;
+  width: 100% !important;
+}
+
+/* Specific chart heights */
+.chart-h-200 { height: 200px; }
+.chart-h-240 { height: 240px; }
+.chart-h-280 { height: 280px; }
+.chart-h-320 { height: 320px; }
+.chart-h-360 { height: 360px; }
+
+/* Chart wrapper card */
+.chart-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: var(--space-5);
+}
+
+.chart-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.chart-card-title {
+  font-size: var(--text-md);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.chart-card-value {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1;
+  margin-top: var(--space-1);
+}
+
+.chart-card-delta {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  margin-top: var(--space-2);
+}
+.chart-card-delta.up   { color: var(--color-success); }
+.chart-card-delta.down { color: var(--color-danger); }
+
+/* Legend */
+.chart-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+.chart-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.chart-legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Metric selector dropdown (inside chart header) */
+.chart-metric-select {
+  padding: 4px 10px 4px var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%236B7280' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+
+/* Sparkline (tiny inline chart) */
+.sparkline-wrap {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 28px;
+}
+
+/* Tag trend dual-line chart */
+.trend-legend {
+  display: flex;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+.trend-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+.trend-legend-line {
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+}
+.trend-legend-line.avg       { background: var(--color-primary); }
+.trend-legend-line.accel     { background: #F59E0B; }
+.trend-legend-line.dashed    { background: repeating-linear-gradient(90deg, var(--color-primary) 0 4px, transparent 4px 8px); }
+
+/* Mini stat with chart beside it */
+.mini-stat-chart {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
