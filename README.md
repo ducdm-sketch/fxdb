@@ -2,9 +2,6 @@
 
 Interactive mockup built as a static site for GitHub Pages.
 
-## Live URL
-`https://[your-username].github.io/ai-game-analyzer-mock-dashboard/`
-
 ## Setup & Deployment
 
 ### Option A — GitHub Pages (recommended for sharing)
